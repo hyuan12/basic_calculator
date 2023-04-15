@@ -19,6 +19,9 @@ def lex(s: str) -> list[token]:
     tokens = []
     i = 0
     while i < len(s):
+        # if s[i:i+2] == "\n":
+        #     tokens.append(token(C.NEWLINE, '\n'))
+        #     i += 2
         if s[i].isspace():
             i += 1
         elif s[i].isalpha():
@@ -31,6 +34,8 @@ def lex(s: str) -> list[token]:
 
             if word in ['true', 'false']:
                 tokens.append(token(C.BOOLEAN, word))
+            elif word == "print":
+                tokens.append(token(C.PRINT, word))
             else:
                 tokens.append(token(C.VARIABLE, word))
 
@@ -53,10 +58,10 @@ def lex(s: str) -> list[token]:
         # expressions
         elif s[i:i+2] == "++":
             tokens.append(token(C.OPERATOR, '++'))
-            i += 1
+            i += 2
         elif s[i:i+2] == "--":
             tokens.append(token(C.OPERATOR, '--'))
-            i += 1
+            i += 2
         elif s[i] == "+":
             tokens.append(token(C.OPERATOR, '+'))
             i += 1
@@ -87,8 +92,11 @@ def lex(s: str) -> list[token]:
         elif s[i] == "=":
             tokens.append(token(C.OPERATOR, '='))
             i += 1
-        elif s[i] == "\n":
-            tokens.append(token(C.NEWLINE, '\n'))
+        # elif s[i:i+2] == "\n":
+        #     tokens.append(token(C.NEWLINE, '\n'))
+        #     i += 2
+        elif s[i] == ',':
+            tokens.append(token(C.COMMA, ','))
             i += 1
         else:
             raise SyntaxError(f'unexpected character {s[i]}')
