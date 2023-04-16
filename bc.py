@@ -1,7 +1,6 @@
 from parser import parse
 from evaluator import evaluate
 import tokenizer
-from slicer import slices
 def main():
     e = evaluate()
     res = []
