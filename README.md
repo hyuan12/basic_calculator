@@ -1,8 +1,10 @@
 Group:
+
 Hai Yuan hyuan12@stevens.edu
 Thrinath Reddy Adaboina tadaboin@stevens.edu
 
 GitHub repo: 
+
 https://github.com/hyuan12/basic_calculator
 
 About 40 hours
