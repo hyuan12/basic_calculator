@@ -15,7 +15,10 @@ I write the code in a txt file in advance, read the program inside and run it ev
 
 ##any bugs or issues you could not resolve##
 
-Handling of negative numbers and priority issues
+1) Handling of negative numbers and priority issues
+2) In the gradescope test, it will be stuck for unknown reasons until it times out
+
+an example of a difficult issue or bug and how you resolved
 
 When learning ast, it is difficult for me to understand the recursive calls between several operator methods, the connection between methods, and the structure of ast nodes. After that, I consulted a lot of information, as well as teaching videos on udemy, and understood that the method in the parse process is based on low priority -> high recursion, the specific composition of ast nodes, how to build a tree structure, and how to evaluate it
 
