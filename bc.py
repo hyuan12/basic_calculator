@@ -406,7 +406,7 @@ class EvalProgram():
         if expr.__class__==NumberExpression:
             return float(expr.var.value)
         elif expr.__class__==VariableExpression:
-            return self.vars.get(expr.var.value,0)
+            return float(self.vars.get(expr.var.value,0.0))
         elif expr.__class__==OperatorExpression:
             l = self.eval_expr(expr.left)
             r = self.eval_expr(expr.right)
