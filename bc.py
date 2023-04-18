@@ -316,9 +316,7 @@ class Parser():
             return self.parse_expression()
         elif self.token.type==Tokens.VARIABLE:
             s=self.assignment_statement()
-            if s:
-                return s
-            raise ParseError()
+            return s
         elif self.token.type==Tokens.NL:
             pass
         else:
@@ -738,6 +736,5 @@ if __name__ == '__main__':
         print("divide by zero")
     except:
         print("parse error")
-
 
 
