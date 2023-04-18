@@ -6,7 +6,7 @@ GitHub repo:
 
 https://github.com/hyuan12/basic_calculator
 
-About 40 hours
+About 50 hours in total
 
 **a description of how you tested your code**
 
